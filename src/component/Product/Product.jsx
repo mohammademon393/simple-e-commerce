@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Product.css';
 
 const Product = ({ product, handleProducts }) => {
-  console.log(product);
+//   console.log(product);
   const [cart, setCart] = useState(false);
 
   const hendleCart = () => {

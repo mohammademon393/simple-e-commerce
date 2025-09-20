@@ -8,7 +8,10 @@ const Products = ({ productsData }) => {
     // console.log(products);
     
     const handleProducts = (product) =>{
-        console.log();
+        const newProducts = [...addProducts, product];
+        setAddProducts(newProducts)
+        // console.log(newProducts);
+        
         
     }
 
@@ -16,6 +19,12 @@ const Products = ({ productsData }) => {
   return (
     <div>
       <h1>Products...</h1>
+
+      <ol>
+        {addProducts.map((addProduct) => (
+          <li key={addProduct.id}>{addProduct.title}</li>
+        ))}
+      </ol>
 
       <div className="card-container">
         {products.map((product) => (
