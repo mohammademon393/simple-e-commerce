@@ -23,4 +23,15 @@
     color: white;
     font-size: smaller;
     margin-bottom: 10px;
+    border: none;
+}
+.btn2{
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: navy;
+    color: white;
+    font-size: smaller;
+    margin-bottom: 10px;
+    border: none;
 }

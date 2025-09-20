@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import './Product.css';
 
-const Product = ({ product }) => {
-    console.log(product);
-    
+const Product = ({ product, handleProducts }) => {
+  console.log(product);
+  const [cart, setCart] = useState(false);
+
+  const hendleCart = () => {
+    setCart(!cart);
+    handleProducts(product);
+  };
+
   return (
     <div className="card-container2">
       <div className="card">
@@ -13,7 +20,9 @@ const Product = ({ product }) => {
         <p>Price: {product.price} </p>
         <p>category: {product.category}</p>
         <p>rating: {product.rating.rate}</p>
-        <button className='btn'>Add to cart</button>
+        <button onClick={hendleCart} className={`btn ${cart && "btn2"}`}>
+          {cart ? "Complate" : "Add To Cart"}
+        </button>
       </div>
     </div>
   );
