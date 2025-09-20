@@ -1,7 +1,7 @@
 
-import { Suspense } from 'react'
-import './App.css'
-import Products from './component/Products/Products'
+import { Suspense } from 'react';
+import './App.css';
+import Products from './component/Products/Products';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <h1>Simple E-Commerce with react</h1>
-      <Suspense fallback={<p>Data commit soon...</p>}>
+      <Suspense fallback={<p>Data comming sooooon...</p>}>
         <Products productsData={productsData}></Products>
       </Suspense>
     </>

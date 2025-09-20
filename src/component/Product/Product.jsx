@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './Product.css';
 
-const Product = ({ product, handleProducts }) => {
-//   console.log(product);
+const Product = ({ product, handleProducts, handleImg }) => {
+  //   console.log(product);
   const [cart, setCart] = useState(false);
 
   const hendleCart = () => {
     setCart(!cart);
     handleProducts(product);
+    handleImg(product);
   };
 
   return (

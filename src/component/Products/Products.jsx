@@ -4,14 +4,19 @@ import './Products.css';
 
 const Products = ({ productsData }) => {
     const products = use(productsData);
-    const [addProducts, setAddProducts] = useState([])
+    const [addProducts, setAddProducts] = useState([]);
+    const [image, setImage] = useState([]);
     // console.log(products);
     
     const handleProducts = (product) =>{
         const newProducts = [...addProducts, product];
         setAddProducts(newProducts)
         // console.log(newProducts);
-        
+    }
+
+    const handleImg = (product) => {
+        const newImage = [...image, product];
+        setImage(newImage)
         
     }
 
@@ -19,6 +24,12 @@ const Products = ({ productsData }) => {
   return (
     <div>
       <h1>Products...</h1>
+
+      <div>
+        {image.map((imgs) => (
+          <img key={imgs.id} src={imgs.image} className="img"></img>
+        ))}
+      </div>
 
       <ol>
         {addProducts.map((addProduct) => (
@@ -31,6 +42,7 @@ const Products = ({ productsData }) => {
           <Product
             key={product.id}
             handleProducts={handleProducts}
+            handleImg={handleImg}
             product={product}
           ></Product>
         ))}
