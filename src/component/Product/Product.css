@@ -1,0 +1,14 @@
+
+
+
+.card{
+    border: 2px solid darkblue;
+    max-width: 250px;
+    background-color: bisque;
+    padding: 10px;
+}
+.img{
+    width: 150px;
+    justify-content: center;
+    display: flex;
+}
